@@ -13,7 +13,8 @@ def get_word_dict(text, start) -> dict:
     return word_dict
 
 
-def main(text) -> None:
+def main() -> None:
+    text = input('Enter text: ')
     k = input('Enter k: ')
     n = input('Enter n: ')
     if not k.isnumeric():
@@ -88,4 +89,4 @@ def main(text) -> None:
 
 
 if __name__ == '__main__':
-    main('So, i want to say, that tomorrow we will get a patch 8.31. aaa aaa aaatch aaa aaa! ddd d ddd bbb ddd ddd dd dd?')
+    main()
