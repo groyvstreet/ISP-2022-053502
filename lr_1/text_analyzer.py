@@ -5,6 +5,7 @@ class TextAnalyzer:
 
     @staticmethod
     def _get_word_dict(text, start):
+        text = text.lower()
         for i in range(0x21, 0x41):
             text = text.replace(chr(i), ' ')
         word_list = text.split()
@@ -27,7 +28,8 @@ class TextAnalyzer:
             temp += text[i]
             if i == len(text) - 1 or (text[i] == '.' and (0x30 > ord(text[i + 1]) or ord(text[i + 1]) > 0x39)) or \
                     text[i] == '!' or text[i] == '?':
-                sent_list.append(temp)
+                if not (len(temp) == 1 and '.' in temp):
+                    sent_list.append(temp)
                 temp = ''
         return [self._get_word_dict(i, 1) for i in sent_list]
 
@@ -51,7 +53,7 @@ class TextAnalyzer:
         value_list.sort()
         index = len(value_list)
         if index % 2 == 0:
-            index /= 2
+            index //= 2
             return (value_list[index] + value_list[index - 1]) / 2
         else:
             index = (index - 1) // 2
