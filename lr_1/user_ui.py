@@ -9,6 +9,7 @@ class UserUI:
         self.n = 4
 
     def request_input(self) -> None:
+        """Asks for input text, k and n."""
         text = input('Enter text: ')
         if not text or text.isspace():
             print('Void string')
@@ -23,21 +24,25 @@ class UserUI:
             self.n = int(n) if int(n) >= 1 else self.n
 
     def print_words(self) -> None:
+        """Displays the list of the words with amount of the repetitions."""
         word_dict = self.text_analyzer.get_word_dict(0)
-        print('Word repetitions: ')
+        print('Words repetitions: ')
         for word in word_dict:
             print(word, word_dict[word])
 
     def print_average_number(self) -> None:
+        """Displays average number of the words in the sentence."""
         average = self.text_analyzer.get_average_number()
-        print('Average number of words in a sentence - ', average)
+        print('Average number of the words in the sentence - ', average)
 
     def print_median_number(self) -> None:
+        """Displays the median number of the words in the sentence."""
         median = self.text_analyzer.get_median_number()
-        print('Median number of words in a sentence - ', median)
+        print('Median number of the words in the sentence - ', median)
 
     def print_top_of_ngrams(self) -> None:
-        sorted_ngram_dict = self.text_analyzer.get_top_of_ngrams(self.n)
+        """Displays the top-k of the ngrams with the repetitions."""
+        sorted_ngram_dict = self.text_analyzer.get_ngram_dict(self.n)
         print('Top', self.k, 'of', self.n, '- grams:')
         counter = 0
         for key in sorted_ngram_dict.keys():

@@ -1,10 +1,14 @@
+import typing
+
+
 class TextAnalyzer:
 
     def __init__(self):
         self.text = ''
 
     @staticmethod
-    def _get_word_dict(text, start):
+    def _get_word_dict(text, start) -> typing.Dict[str, int]:
+        """Returns the dictionary of the words with amount of the repetitions in the text."""
         text = text.lower()
         for i in range(0x21, 0x41):
             text = text.replace(chr(i), ' ')
@@ -17,10 +21,12 @@ class TextAnalyzer:
                 word_dict[word] = start
         return word_dict
 
-    def get_word_dict(self, start) -> dict:
+    def get_word_dict(self, start) -> typing.Dict[str, int]:
+        """Returns the dictionary of the words with amount of the repetitions."""
         return self._get_word_dict(self.text, start)
 
-    def get_sent_list(self) -> list:
+    def get_sent_list(self) -> typing.List[typing.Dict[str, int]]:
+        """Returns the list of the sentences - dictionaries of the words with amount of the repetitions."""
         text = self.text
         sent_list = []
         temp = ''
@@ -28,12 +34,17 @@ class TextAnalyzer:
             temp += text[i]
             if i == len(text) - 1 or (text[i] == '.' and (0x30 > ord(text[i + 1]) or ord(text[i + 1]) > 0x39)) or \
                     text[i] == '!' or text[i] == '?':
-                if not (len(temp) == 1 and '.' in temp):
-                    sent_list.append(temp)
+                sent_list.append(temp)
                 temp = ''
-        return [self._get_word_dict(i, 1) for i in sent_list]
+        sent_list2 = []
+        for i in sent_list:
+            temp = self._get_word_dict(i, 1)
+            if temp:
+                sent_list2.append(temp)
+        return sent_list2
 
     def get_average_number(self) -> float:
+        """Returns the average number of the words in the sentence."""
         sent_list = self.get_sent_list()
         average = 0
         for sent in sent_list:
@@ -42,6 +53,7 @@ class TextAnalyzer:
         return average / len(sent_list)
 
     def get_median_number(self) -> float:
+        """Returns the median number of the words in the sentence."""
         sent_list = self.get_sent_list()
         temp = 0
         value_list = []
@@ -59,7 +71,8 @@ class TextAnalyzer:
             index = (index - 1) // 2
             return value_list[index]
 
-    def get_top_of_ngrams(self, n) -> dict:
+    def get_ngram_dict(self, n) -> typing.Dict[str, int]:
+        """Returns the sorted dictionary of the ngrams with amount of the repetitions by the value."""
         word_dict = self.get_word_dict(1)
         ngram_dict = {}
         for word in word_dict:
