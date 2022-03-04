@@ -13,9 +13,9 @@ class TextAnalyzer:
         for i in range(0, len(text)):
             if 0x20 < ord(text[i]) < 0x41 or 0x5a < ord(text[i]) < 0x61 or 0x7a < ord(text[i]) < 0x7f:
                 if ord(text[i]) == 0x2d:
-                    text = text.replace(i, '')
+                    text = text.replace(text[i], '')
                 else:
-                    text = text.replace(i, ' ')
+                    text = text.replace(text[i], ' ')
         word_list = text.split()
         word_dict = {}
         for word in word_list:
