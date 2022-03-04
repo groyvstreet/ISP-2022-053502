@@ -10,12 +10,15 @@ class TextAnalyzer:
     def _get_word_dict(text, start) -> typing.Dict[str, int]:
         """Returns the dictionary of the words with amount of the repetitions in the text."""
         text = text.lower()
-        for i in range(0, len(text)):
-            if 0x20 < ord(text[i]) < 0x41 or 0x5a < ord(text[i]) < 0x61 or 0x7a < ord(text[i]) < 0x7f:
-                if ord(text[i]) == 0x2d:
-                    text = text.replace(text[i], '')
-                else:
-                    text = text.replace(text[i], ' ')
+        for i in range(0x21, 0x2d):
+            text = text.replace(chr(i), ' ')
+        for i in range(0x2e, 0x41):
+            text = text.replace(chr(i), ' ')
+        for i in range(0x5b, 0x61):
+            text = text.replace(chr(i), ' ')
+        for i in range(0x7b, 0x7f):
+            text = text.replace(chr(i), ' ')
+        text = text.replace('-', '')
         word_list = text.split()
         word_dict = {}
         for word in word_list:
