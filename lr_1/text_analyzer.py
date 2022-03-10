@@ -10,7 +10,7 @@ class TextAnalyzer:
     def _get_word_dict(text: str, start: int) -> typing.Dict[str, int]:
         """Returns the dictionary of the words with amount of the repetitions in the text."""
         text = text.lower()
-        text = "".join(s for s in text if s.isalpha() or s == '-' ' ')
+        text = "".join(s for s in text if s.isalpha() or s == ' ' or s == '-' ' ')
         text = text.replace('-', '')
         word_list = text.split()
         word_dict = {}
