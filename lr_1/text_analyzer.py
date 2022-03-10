@@ -7,17 +7,10 @@ class TextAnalyzer:
         self.text = ''
 
     @staticmethod
-    def _get_word_dict(text, start) -> typing.Dict[str, int]:
+    def _get_word_dict(text: str, start: int) -> typing.Dict[str, int]:
         """Returns the dictionary of the words with amount of the repetitions in the text."""
         text = text.lower()
-        for i in range(0x21, 0x2d):
-            text = text.replace(chr(i), ' ')
-        for i in range(0x2e, 0x41):
-            text = text.replace(chr(i), ' ')
-        for i in range(0x5b, 0x61):
-            text = text.replace(chr(i), ' ')
-        for i in range(0x7b, 0x7f):
-            text = text.replace(chr(i), ' ')
+        text = "".join(s for s in text if s.isalpha() or s == '-' ' ')
         text = text.replace('-', '')
         word_list = text.split()
         word_dict = {}
@@ -28,7 +21,7 @@ class TextAnalyzer:
                 word_dict[word] = start
         return word_dict
 
-    def get_word_dict(self, start) -> typing.Dict[str, int]:
+    def get_word_dict(self, start: int) -> typing.Dict[str, int]:
         """Returns the dictionary of the words with amount of the repetitions."""
         return self._get_word_dict(self.text, start)
 
@@ -77,7 +70,7 @@ class TextAnalyzer:
             index = (index - 1) // 2
             return value_list[index]
 
-    def get_ngram_dict(self, n) -> typing.Dict[str, int]:
+    def get_ngram_dict(self, n: int) -> typing.Dict[str, int]:
         """Returns the sorted dictionary of the ngrams with amount of the repetitions by the value."""
         word_dict = self.get_word_dict(1)
         ngram_dict = {}
