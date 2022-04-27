@@ -1,0 +1,117 @@
+{
+	"__type__": "function",
+	"__name__": "test_func2",
+	"__globals__": {
+		"math": "module",
+		"a": 123
+	},
+	"__code__": {
+		"co_argcount": 1,
+		"co_posonlyargcount": 0,
+		"co_knowlyargcount": 0,
+		"co_nlocals": 3,
+		"co_stacksize": 4,
+		"co_flags": 67,
+		"co_code": [
+			100,
+			1,
+			125,
+			1,
+			100,
+			2,
+			100,
+			3,
+			132,
+			0,
+			125,
+			2,
+			116,
+			0,
+			160,
+			1,
+			124,
+			0,
+			116,
+			2,
+			20,
+			0,
+			124,
+			1,
+			20,
+			0,
+			124,
+			2,
+			131,
+			0,
+			20,
+			0,
+			161,
+			1,
+			83,
+			0
+		],
+		"co_consts": [
+			null,
+			123,
+			{
+				"co_argcount": 0,
+				"co_posonlyargcount": 0,
+				"co_knowlyargcount": 0,
+				"co_nlocals": 0,
+				"co_stacksize": 1,
+				"co_flags": 83,
+				"co_code": [
+					100,
+					1,
+					83,
+					0
+				],
+				"co_consts": [
+					null,
+					23
+				],
+				"co_names": [
+				],
+				"co_varnames": [
+				],
+				"co_filename": "/home/kraken/PycharmProjects/Lab2/test_objects/test_functions.py",
+				"co_name": "f",
+				"co_firstlineno": 15,
+				"co_lnotab": [
+					0,
+					1
+				],
+				"co_freevars": [
+				],
+				"co_cellvars": [
+				]
+			},
+			"test_func2.<locals>.f"
+		],
+		"co_names": [
+			"math",
+			"sin",
+			"a"
+		],
+		"co_varnames": [
+			"x",
+			"b",
+			"f"
+		],
+		"co_filename": "/home/kraken/PycharmProjects/Lab2/test_objects/test_functions.py",
+		"co_name": "test_func2",
+		"co_firstlineno": 12,
+		"co_lnotab": [
+			0,
+			1,
+			4,
+			2,
+			8,
+			3
+		],
+		"co_freevars": [
+		],
+		"co_cellvars": [
+		]
+	}
+}

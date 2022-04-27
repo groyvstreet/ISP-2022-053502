@@ -1,0 +1,63 @@
+__bases__:
+- __bases__:
+  - __bases__: []
+    __dict__: {}
+    __name__: object
+    __type__: class
+  __dict__:
+    __init__:
+      __code__:
+        co_argcount: 1
+        co_cellvars: []
+        co_code:
+        - 100
+        - 1
+        - 124
+        - 0
+        - 95
+        - 0
+        - 100
+        - 0
+        - 83
+        - 0
+        co_consts:
+        - null
+        - 0
+        co_filename: /home/kraken/PycharmProjects/Lab2/test_objects/test_classes.py
+        co_firstlineno: 10
+        co_flags: 67
+        co_freevars: []
+        co_knowlyargcount: 0
+        co_lnotab:
+        - 0
+        - 1
+        co_name: __init__
+        co_names:
+        - field0
+        co_nlocals: 1
+        co_posonlyargcount: 0
+        co_stacksize: 2
+        co_varnames:
+        - self
+      __globals__: {}
+      __name__: __init__
+      __type__: function
+    field1: field1
+    field2: 1
+    field3: 1.1
+  __name__: TestClass1
+  __type__: class
+__dict__:
+  field4: true
+  field5: false
+  field6:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  field7:
+    key1: 1
+    key2: 2
+__name__: TestClass2
+__type__: class

@@ -1,0 +1,79 @@
+{
+	"__type__": "class",
+	"__name__": "TestClass4",
+	"__bases__": [
+		{
+			"__type__": "class",
+			"__name__": "object",
+			"__bases__": [
+			],
+			"__dict__": {
+			}
+		}
+	],
+	"__dict__": {
+		"field8": [
+			[
+				1,
+				"2"
+			],
+			[
+				3,
+				"4"
+			],
+			5,
+			"6"
+		],
+		"f4": {
+			"__type__": "function",
+			"__name__": "f4",
+			"__globals__": {
+				"inspect": "module"
+			},
+			"__code__": {
+				"co_argcount": 1,
+				"co_posonlyargcount": 0,
+				"co_knowlyargcount": 0,
+				"co_nlocals": 1,
+				"co_stacksize": 3,
+				"co_flags": 67,
+				"co_code": [
+					116,
+					0,
+					160,
+					1,
+					124,
+					0,
+					106,
+					2,
+					161,
+					1,
+					83,
+					0
+				],
+				"co_consts": [
+					null
+				],
+				"co_names": [
+					"inspect",
+					"iscode",
+					"field8"
+				],
+				"co_varnames": [
+					"self"
+				],
+				"co_filename": "/home/kraken/PycharmProjects/Lab2/test_objects/test_classes.py",
+				"co_name": "f4",
+				"co_firstlineno": 35,
+				"co_lnotab": [
+					0,
+					1
+				],
+				"co_freevars": [
+				],
+				"co_cellvars": [
+				]
+			}
+		}
+	}
+}
