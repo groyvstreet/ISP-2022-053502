@@ -1,0 +1,139 @@
+__code__:
+  co_argcount: 1
+  co_cellvars: []
+  co_code:
+  - 100
+  - 1
+  - 125
+  - 1
+  - 100
+  - 2
+  - 100
+  - 3
+  - 132
+  - 0
+  - 125
+  - 2
+  - 116
+  - 0
+  - 160
+  - 1
+  - 124
+  - 0
+  - 116
+  - 2
+  - 20
+  - 0
+  - 124
+  - 1
+  - 20
+  - 0
+  - 124
+  - 2
+  - 131
+  - 0
+  - 20
+  - 0
+  - 161
+  - 1
+  - 83
+  - 0
+  co_consts:
+  - null
+  - 123
+  - co_argcount: 0
+    co_cellvars: []
+    co_code:
+    - 100
+    - 1
+    - 100
+    - 2
+    - 132
+    - 0
+    - 125
+    - 0
+    - 100
+    - 3
+    - 124
+    - 0
+    - 131
+    - 0
+    - 20
+    - 0
+    - 83
+    - 0
+    co_consts:
+    - null
+    - co_argcount: 0
+      co_cellvars: []
+      co_code:
+      - 100
+      - 1
+      - 83
+      - 0
+      co_consts:
+      - null
+      - 12
+      co_filename: /home/kraken/PycharmProjects/Lab2/test_objects/test_functions.py
+      co_firstlineno: 25
+      co_flags: 83
+      co_freevars: []
+      co_knowlyargcount: 0
+      co_lnotab:
+      - 0
+      - 1
+      co_name: f2
+      co_names: []
+      co_nlocals: 0
+      co_posonlyargcount: 0
+      co_stacksize: 1
+      co_varnames: []
+    - test_func3.<locals>.f.<locals>.f2
+    - 23
+    co_filename: /home/kraken/PycharmProjects/Lab2/test_objects/test_functions.py
+    co_firstlineno: 24
+    co_flags: 83
+    co_freevars: []
+    co_knowlyargcount: 0
+    co_lnotab:
+    - 0
+    - 1
+    - 8
+    - 3
+    co_name: f
+    co_names: []
+    co_nlocals: 1
+    co_posonlyargcount: 0
+    co_stacksize: 2
+    co_varnames:
+    - f2
+  - test_func3.<locals>.f
+  co_filename: /home/kraken/PycharmProjects/Lab2/test_objects/test_functions.py
+  co_firstlineno: 21
+  co_flags: 67
+  co_freevars: []
+  co_knowlyargcount: 0
+  co_lnotab:
+  - 0
+  - 1
+  - 4
+  - 2
+  - 8
+  - 6
+  co_name: test_func3
+  co_names:
+  - math
+  - sin
+  - a
+  co_nlocals: 3
+  co_posonlyargcount: 0
+  co_stacksize: 4
+  co_varnames:
+  - x
+  - b
+  - f
+__globals__:
+  a: 123
+  math: module
+__name__: test_func3
+__type__: function
